@@ -19,7 +19,8 @@ func RegisterRoutes() *mux.Router {
 
 	r.HandleFunc("/sila_transact", services.HandleSilaTransact).Methods(http.MethodPost)
 	r.HandleFunc("/nchl_transact", services.HandleNCHLTransact).Methods(http.MethodPost)
-	r.HandleFunc("/accept_any", services.HandleGenericPost).Methods(http.MethodPost)
+	r.HandleFunc("/check_fund_status", services.HandleGenericPost).Methods(http.MethodPost)
+	r.HandleFunc("/wallet_payout", services.HandleGenericPost).Methods(http.MethodPost)
 
 	return r
 }
